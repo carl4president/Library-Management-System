@@ -28,7 +28,7 @@ class LoginController extends Controller
                 $user = Auth::user();
 
                 Session::put($this->getUserSessionData($user));
-                return redirect()->route('login')->with('success', 'Login successfully');
+                return redirect()->route('dashboard')->with('success', 'Login successfully');
             } else {
                 return back()->withErrors(['error' => 'Invalid Email'])->onlyInput('Email');
             }

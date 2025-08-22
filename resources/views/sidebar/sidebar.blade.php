@@ -1,12 +1,12 @@
 <nav class="fixed bottom-0 top-0 left-0 w-48 bg-white shadow-2xl px-3 py-5">
     <div class="flex flex-row gap-2 font-medium items-center"><i data-lucide="align-justify" class="size-5"> </i><span>LRMS</span></div>
-    <ul class="text-sm flex flex-col justify-around h-full py-6">
-       <li class="flex items-center gap-2"><i data-lucide="layout-dashboard" class="size-4 fill-black"></i><span>Dashboard</span></li>
-       <li class="flex items-center gap-2"><i data-lucide="book-open" class="size-4"></i><span>Books Management</span></li>
-       <li class="flex items-center gap-2"><i data-lucide="users" class="size-4"></i><span>Members / Students</span></li>
-       <li class="flex items-center gap-2"><i data-lucide="library-big" class="size-4"></i><span>Borrow & Return</span></li>
-       <li class="flex items-center gap-2"><i data-lucide="arrow-left-right" class="size-4"></i><span>Transactions</span></li>
-       <li class="flex items-center gap-2"><i data-lucide="shield-user" class="size-4"></i><span>User Management (for admins only)</span></li>
-       <li class="flex items-center gap-2"><i data-lucide="settings" class="size-4"></i><span>Settings</span></li>
+    <ul class="text-sm font-medium flex flex-col justify-around h-full py-6">
+       <li><a href="{{ route('dashboard') }}" class="flex items-center gap-2 px-1 py-1.5 {{ request()->is('dashboard') ? "bg-purple-100 text-purple-500" : "" }}"><i data-lucide="layout-dashboard" class="size-4 fill-black {{ request()->is('dashboard') ? "fill-purple-500" : "" }}"></i><span>Dashboard</span></a></li>
+       <li><a href="{{ route('allbook') }}" class="flex items-center gap-2 px-1 py-1.5 {{ request()->is('allbook') ? "bg-purple-100 text-purple-500" : "bg-none" }}"><i data-lucide="book-open" class="size-4 fill-black {{ request()->is('allbook') ? "fill-purple-500" : "" }}"></i><span>Books Management</span></a></li>
+       <li><a href="" class="flex items-center gap-2 px-1 py-1.5 {{ request()->is('allbook') ? "bg-purple-100 text-purple-500" : "bg-none" }}"><i data-lucide="users" class="size-4 fill-black {{ request()->is('dashboard') ? "fill-purple-500" : "" }}"></i><span>Members / Students</span></a></li>
+       <li><a href="" class="flex items-center gap-2 px-1 py-1.5 {{ request()->is('allbook') ? "bg-purple-100 text-purple-500" : "bg-none" }}"><i data-lucide="library-big" class="size-4 fill-black {{ request()->is('dashboard') ? "fill-purple-500" : "" }}"></i><span>Borrow & Return</span></a></li>
+       <li><a href="" class="flex items-center gap-2 px-1 py-1.5 {{ request()->is('allbook') ? "bg-purple-100 text-purple-500" : "bg-none" }}"><i data-lucide="arrow-left-right" class="size-4 fill-black {{ request()->is('dashboard') ? "fill-purple-500" : "" }}"></i><span>Transactions</span></a></li>
+       <li><a href="" class="flex items-center gap-2 px-1 py-1.5 {{ request()->is('allbook') ? "bg-purple-100 text-purple-500" : "bg-none" }}"><i data-lucide="shield-user" class="size-4 fill-black {{ request()->is('dashboard') ? "fill-purple-500" : "" }}"></i><span>User Management (for admins only)</span></a></li>
+       <li><a href="" class="flex items-center gap-2 px-1 py-1.5 {{ request()->is('allbook') ? "bg-purple-100 text-purple-500" : "bg-none" }}"><i data-lucide="settings" class="size-4 fill-black {{ request()->is('dashboard') ? "fill-purple-500" : "" }}"></i><span>Settings</span></a></li>
     </ul>
 </nav>

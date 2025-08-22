@@ -23,8 +23,12 @@ Route::group(['namespace' => 'App\Http\Controllers\Auth'], function () {
     });
 });
 
-Route::group(['namespace' => 'App\Http\Controllers'], function () {
+Route::group(['namespace' => 'App\Http\Controllers', 'middleware' => ['auth']], function () {
       Route::controller(DashboardController::class)->group(function (){
         Route::get('/dashboard', 'index')->name('dashboard');
+      });
+
+      Route::controller(BookController::class)->group(function() {
+         Route::get('/allbook', 'index')->name('allbook');
       });
 });

@@ -2,6 +2,9 @@
     <main class="bg-gray-400 min-h-screen pl-60 pt-20 pr-10">
         @include('components.admin-header')
         @include('sidebar.sidebar')
+        <div class="w-full h-12 bg-white rounded-md shadow-2xl flex items-center px-4 mb-4">
+        <p class="text-sm font-medium">Hi, welcome to LMS dashboard {{$user['name']}}!</p>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-evenly gap-6">
             <div class="flex flex-row items-center justify-center gap-4 bg-[#874cff] w-full h-28 text-white rounded-sm">
                 <i data-lucide="newspaper" class="size-7"></i>
